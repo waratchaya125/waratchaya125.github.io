@@ -64,6 +64,7 @@
       max-width: 850px;
       margin: 2rem auto;
       padding: 2rem;
+      animation: fadeInUp 0.8s ease both;
     }
 
     .card {
@@ -126,8 +127,44 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    section {
-      animation: fadeInUp 0.8s ease both;
+    /* ==== รูปโปรไฟล์ ==== */
+    .profile-pic {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid gold;
+      box-shadow: 0 0 20px gold, 0 0 40px #f7d774;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #ffef8a, 0 0 60px gold;
+    }
+
+    /* ==== ผลงาน ==== */
+    .project-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 1rem;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px gold, 0 0 50px #f7d774;
     }
   </style>
 </head>
@@ -140,10 +177,11 @@
 
   <section id="intro" class="card">
     <h2>1. แนะนำตัว (Introduction / Profile)</h2>
+    <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
     <p><strong>ชื่อ:</strong> นางสาว วรัชยา พลเรือง</p>
-    <p><strong>รหัสนักศึกษา</strong> 66040233125 </p>
+    <p><strong>รหัสนักศึกษา:</strong> 66040233125</p>
     <p><strong>คณะ:</strong> วิทยาศาสตร์ </p>
-    <p><strong>สาขา</strong> เทคโนโลยีสารสนเทศ</p>
+    <p><strong>สาขา:</strong> เทคโนโลยีสารสนเทศ</p>
     <p><strong>สถานะ:</strong> นักศึกษาปีที่ 3</p>
   </section>
 
@@ -151,8 +189,8 @@
     <h2>2. ทักษะ (Skills)</h2>
     <ul>
       <li><strong>Soft Skills:</strong> การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</li>
-      <li><strong>Soft Skills:</strong> Tools: VS Code, Figma</li>
-      <li><strong>Soft Skills:</strong> ออกแบบหน้า UI  </li>
+      <li><strong>Tools:</strong> VS Code, Figma</li>
+      <li><strong>Design:</strong> ออกแบบหน้า UI </li>
     </ul>
   </section>
 
@@ -160,34 +198,38 @@
     <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
     <ul>
       <li>ระบบขายสินค้าออนไลน์ (E-Commerce)</li>
-      <li>เว็บไซต์ ประเพณีอีสาน </li>
+      <li>เว็บไซต์ประเพณีอีสาน</li>
     </ul>
+
     <p>ดูผลงานเพิ่มเติมได้ที่ 👉 
-      <a href="https://github.com/yourusername" target="_blank" class="highlight">GitHub Repository</a>
+      <a href="https://github.com/waratchaya125" target="_blank" class="highlight">GitHub Repository</a>
     </p>
   </section>
 
   <section id="education" class="card">
     <h2>4. การศึกษา (Education)</h2>
-    <li><strong>โรงเรียนกฤชานันท์</strong> - ระดับชั้นอนุบาล</li>
-    <li><strong>โรงเรียนบ้านหนองหานวันครู(2502)</strong> - ระดับชั้นประถม</li>
-    <li><strong>โรงเรียนพิชญพิชญ์</strong> - ระดับชั้นมัธยมต้น</li>
-    <li><strong>วิทยาลัยเทคโนโบยีพิชญพิชญ์</strong> - ระดับประกาศนียบัตรวิชาชีพ</li>
-    <p>คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี (2566-ปัจจุบัน)</p>
-    <p></p>
+    <ul>
+      <li><strong>โรงเรียนกฤชานันท์</strong> - ระดับชั้นอนุบาล</li>
+      <li><strong>โรงเรียนบ้านหนองหานวันครู(2502)</strong> - ระดับชั้นประถม</li>
+      <li><strong>โรงเรียนพิชญพิชญ์</strong> - ระดับชั้นมัธยมต้น</li>
+      <li><strong>วิทยาลัยเทคโนโลยีพิชญพิชญ์</strong> - ระดับประกาศนียบัตรวิชาชีพ</li>
+      <p>คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี (2566-ปัจจุบัน)</p>
+    </ul>
+    
   </section>
 
   <section id="activities" class="card">
     <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
     <ul>
-      <li>ผู้เข้าร่วมอบรม “AI for Beginners by Microsoft”</li>
+      <li>เข้าร่วมอบรม AI</li>
+    </ul>
   </section>
- 
+
   <section id="contact" class="card">
     <h2>6. ติดต่อ (Contact)</h2>
     <p><strong>Email:</strong> 66040233125@udru.ac.th</p>
     <p><strong>GitHub:</strong> <a href="https://github.com/waratchaya125" target="_blank">github.com/waratchaya125</a></p>
-    <p><strong>Facebook:</strong> <a href="Facebook">https://www.facebook.com/share/1BkSDB4cK6/?mibextid=wwXIfr</a></p>
+    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BkSDB4cK6/?mibextid=wwXIfr" target="_blank">Facebook Profile</a></p>
   </section>
 
   <section id="career" class="card">

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | หรูหราหมาเห่า Edition 🐾</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap');
+
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: radial-gradient(circle at top, #1c1c1c, #000);
+      color: #f4e8c1;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2b2b2b, #000);
+      color: #f5d46b;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      border-bottom: 2px solid #c6a94e;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px #f7d774;
+    }
+
+    h2 {
+      position: relative;
+      color: #f7d774;
+      padding-bottom: 8px;
+      margin-top: 0;
+      font-size: 1.5rem;
+      text-shadow: 0 0 10px #f7d774;
+    }
+
+    /* เส้นไฟทองวิ่ง */
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #f7d774, transparent);
+      animation: goldRun 2.5s infinite linear;
+    }
+
+    @keyframes goldRun {
+      0% { background-position: -200px 0; }
+      100% { background-position: 200px 0; }
+    }
+
+    section {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      border-radius: 20px;
+      box-shadow: 0 4px 25px rgba(255, 215, 0, 0.1);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 35px rgba(255, 215, 0, 0.3);
+    }
+
+    ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #f7d774;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 8px #f7d774;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(135deg, #000, #1c1c1c);
+      border-top: 1px solid #c6a94e;
+      color: #f7d774;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .highlight {
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 0 0 5px #f7d774;
+    }
+
+    ::selection {
+      background: #f7d774;
+      color: #000;
+    }
+
+    /* เอฟเฟกต์ Fade-in เวลาเลื่อน */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      animation: fadeInUp 0.8s ease both;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>✨ Portfolio นักศึกษา ✨</h1>
+    <p>GitHub.io - เว็บไซต์แนะนำตัว</p>
+  </header>
+
+  <section id="intro" class="card">
+    <h2>1. แนะนำตัว (Introduction / Profile)</h2>
+    <p><strong>ชื่อ:</strong> นางสาว วรัชยา พลเรือง</p>
+    <p><strong>รหัสนักศึกษา</strong> 66040233125 </p>
+    <p><strong>คณะ:</strong> วิทยาศาสตร์ </p>
+    <p><strong>สาขา</strong> เทคโนโลยีสารสนเทศ</p>
+    <p><strong>สถานะ:</strong> นักศึกษาปีที่ 3</p>
+  </section>
+
+  <section id="skills" class="card">
+    <h2>2. ทักษะ (Skills)</h2>
+    <ul>
+      <li><strong>Soft Skills:</strong> การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</li>
+      <li><strong>Soft Skills:</strong> Tools: VS Code, Figma</li>
+      <li><strong>Soft Skills:</strong> ออกแบบหน้า UI  </li>
+    </ul>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
+    <ul>
+      <li>ระบบขายสินค้าออนไลน์ (E-Commerce)</li>
+      <li>เว็บไซต์ ประเพณีอีสาน </li>
+    </ul>
+    <p>ดูผลงานเพิ่มเติมได้ที่ 👉 
+      <a href="https://github.com/yourusername" target="_blank" class="highlight">GitHub Repository</a>
+    </p>
+  </section>
+
+  <section id="education" class="card">
+    <h2>4. การศึกษา (Education)</h2>
+    <li><strong>โรงเรียนกฤชานันท์</strong> - ระดับชั้นอนุบาล</li>
+    <li><strong>โรงเรียนบ้านหนองหานวันครู(2502)</strong> - ระดับชั้นประถม</li>
+    <li><strong>โรงเรียนพิชญพิชญ์</strong> - ระดับชั้นมัธยมต้น</li>
+    <li><strong>วิทยาลัยเทคโนโบยีพิชญพิชญ์</strong> - ระดับประกาศนียบัตรวิชาชีพ</li>
+    <p>คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี (2566-ปัจจุบัน)</p>
+    <p></p>
+  </section>
+
+  <section id="activities" class="card">
+    <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
+    <ul>
+      <li>ผู้เข้าร่วมอบรม “AI for Beginners by Microsoft”</li>
+  </section>
+ 
+  <section id="contact" class="card">
+    <h2>6. ติดต่อ (Contact)</h2>
+    <p><strong>Email:</strong> 66040233125@udru.ac.th</p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/waratchaya125" target="_blank">github.com/waratchaya125</a></p>
+    <p><strong>Facebook:</strong> <a href="Facebook">https://www.facebook.com/share/1BkSDB4cK6/?mibextid=wwXIfr</a></p>
+  </section>
+
+  <section id="career" class="card">
+    <h2>7. องค์ประกอบเสริม (Career Interest)</h2>
+    <p>เป้าหมายในอนาคต: เป็นนักพัฒนา <span class="highlight">Front End Developer</span> </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Student Portfolio | Waratchaya Phonruang 🐾</p>
+  </footer>
+</body>
+</html>
